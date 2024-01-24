@@ -7,37 +7,37 @@ Para ficar mais claro, veja como funciona abaixo.
 
 ## Como funciona
 
-O script usa a função `maketrans` da classe `str` do Python para criar várias tabelas de tradução. Cada tabela mapeia um conjunto de caracteres para outro conjunto. Por exemplo, a primeira tabela mapeia 'aioO' para '@100'. O script então usa essas tabelas para substituir caracteres nas palavras de entrada e gerar variações.
+O script usa a função `maketrans` do Python para criar várias tabelas, em que cada uma delas 'mapeia' um conjunto de caracteres para outro conjunto. Por exemplo, a primeira tabela mapeia 'aioO' para '@100', assim o script usa essas 'tabelas' para substituir caracteres nas palavras de entrada e gerar variações.
 
-Na prática, o que estamos fazendo é criando variações da palavra fornecida. Como substituindo letras por caracteres especiais parecidas, como por exemplo trocar um `S` da palavra fornecida por um `$`, ou um `A` por `@` ou um `4`, e por aí vai.
+Na prática, o que estamos fazendo é criando variações de escrita da(s) palavra(s) fornecida(s) pelo usuário. Como substituindo letras por caracteres especiais parecidas, como por exemplo trocar um `S` da palavra fornecida por um `$`, ou um `A` por `@` - ou um `4` -, e por aí vai. Até aqui teremos uma lista que pega qualquer palavra digitada e a deixa de várias formas diferentes, mas ainda temos mais opções de combinações para ser feito e incrementar a lista.
 
-Até aqui teremos uma lista que pega qualquer palavra digitada e a deixa de várias formas diferentes, mas podemos escolher mais coisa para ser feito.
+Podemos adicionar, por exemplo, as variações das palavras geradas seguidas de um ano específico - ou um ano específico seguido das variações das palavras. Em outras palavras, estamos gerando novas combinações que agora também usam sequências númericas para complementar a lista de senhas. Para utilizar esta função, é necessário utilizar o Modo Simples ao escolher a sequência numéria. Até aqui, temos palavras geradas de diversas formas de escrita e as mesmas seguidas de sequência numéria. 
 
-Podemos colocar, por exemplo, um ano que virá após as palavras geradas também. Isto é, estamos gerando novas combinações que agora usam números (Obs: É necessário utilizar o Modo Simples ao escolher uma sequência numéria, por exemplo, para colocar um ano específico). 
+Agora, também existe a ideia de criar uma wordlist que utilize números aleatórios ao invés do padrão digitado, também vindo antes ou depois de cada palavra, caso não saiba que sequência digitar. Poderá ser feito assim utilizando o Modo Avançado do script. Neste caso, não importa se você digitou ou não algo nas sequências, pois neste os números serão aleatórios e serão testados mais de uma sequência numérica. Até aqui, podemos ver que temos algumas opções interessantes para criação de uma lista de senhas. 
 
-Até aqui, temos palavras geradas de diversas formas de escrita e as mesmas seguidas de sequência numéria. 
+## Modo de uso
 
-Agora, caso a ideia seja criar uma wordlist que utilize essas palavras geradas com números aleatórios antes ou depois de cada palavra, podemos fazer assim também.
+Podemos ver, então, que as opções interessantes se baseiam em criar uma lista de variações de palavras, com ou sem sequências numéricas padronizados ou randomizados. Para isso, temos a opção dos 'modos de uso'.
 
-Por isso temos a opção dos modos de uso.
+No modo simples, o script utiliza a sequência numérica para incrementar a wordlist - que pode ter sido digitada ou não -, colocando-a antes ou depois da variação de caractere.
 
-No modo simples, o script utiliza a sequência numérica para incrementar a wordlist - que pode ter sido digitada ou não -, colocando-a sempre após a variação da palavra.
+No modo avançado, o script gera números aleatórios as variação de palavra gerada, em vez de usar a sequência numérica fixa - que pode ter sido digitada ou não.
 
-No modo avançado, o script gera números aleatórios para cada variação de palavra, em vez de usar a sequência numérica fixa - que pode ter sido digitada ou não.
+É importante dizer que o arquivo `wordlist.txt` já gerado será sobrescrito ao reusar o script com o mesmo na pasta. O recomendado é renomear o nome da lista que desejar manter ou fazer um backup.
 
-## Como usar
+## Como usar o script
 
-1. Execute o script Python.
-2. Quando solicitado, digite uma palavra e pressione Enter. Você pode digitar quantas palavras quiser. Quando terminar, pressione Enter.
-3. Digite uma sequência numérica quando solicitado, ou deixe em branco para não usar uma sequência numérica *(principalmente caso queira o aleatório do avançado)*.
+1. Execute o script Python (pode ser usado via IDLE ou terminal, por exemplo).
+2. Quando solicitado, digite uma palavra e pressione Enter. Você pode digitar quantas palavras quiser. Quando terminar, pressione Enter novamente sem digitar mais nada.
+3. Digite uma sequência numérica quando solicitado, ou deixe em branco para não usar uma sequência numérica padronizada *(principalmente caso queira o aleatório do avançado)*.
 4. Escolha o modo de execução: '1' para Modo Simples ou '2' para Modo Avançado.
 5. O script irá gerar a wordlist e salvar em um arquivo chamado 'wordlist.txt'.
 
 ## Exemplo
 
-Vamos supor que você insira a palavra 'senha' e escolha o Modo Avançado. O script irá gerar variações como 'senha1234', '1234senha', 'senha@5678', '5678@senha', e assim por diante.
+Vamos supor que você insira a palavra 'senha' e escolha o Modo Avançado. O script irá gerar variações como '$3nh4', 'senha1234', '1234senha', 'senha@5678', '5678@senha' e assim por diante.
+Neste mesmo cenário tendo escolhido o Modo Simples e com o padrão numérico de `2001`, o script irá gerar variações como '$3nh4', 'senha2001','senha@2001', '2001@Senha', e assim por diante.
 
 ## Nota
 
 Este script foi escrito para Python 3. Certifique-se de ter Python 3 instalado em seu sistema antes de executar o script.
-

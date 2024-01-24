@@ -7,13 +7,16 @@ Para ficar mais claro, veja como funciona abaixo.
 
 ## Como funciona
 
-O script usa a função `maketrans` do Python para criar várias tabelas, em que cada uma delas 'mapeia' um conjunto de caracteres para outro conjunto. Por exemplo, a primeira tabela mapeia 'aioO' para '@100', assim o script usa essas 'tabelas' para substituir caracteres nas palavras de entrada e gerar variações.
+Resumidamente, neste script a criação da lista de palavras se dá ao reescrever as palavras de diversas formas diferentes, utilizando caracteres especiais e/ou números nos lugares de letras parecidas, além de poder utilizar sequências numéricas também para incrementar.
 
-Na prática, o que estamos fazendo é criando variações de escrita da(s) palavra(s) fornecida(s) pelo usuário. Como substituindo letras por caracteres especiais parecidas, como por exemplo trocar um `S` da palavra fornecida por um `$`, ou um `A` por `@` - ou um `4` -, e por aí vai. Até aqui teremos uma lista que pega qualquer palavra digitada e a deixa de várias formas diferentes, mas ainda temos mais opções de combinações para ser feito e incrementar a lista.
+O script usa a função `maketrans` do Python para criar várias tabelas, os quais cada uma 'mapeia' um conjunto de caracteres para outro conjunto. Por exemplo, a primeira tabela mapeia 'aioO' para '@100' - ou seja, colocando 'a' para ser substituído por '@', 'i' por '1' e por aí vai -, assim o script usa essas 'tabelas' para substituir caracteres nas palavras de entrada e gerar variações da palavra digitada.
 
-Podemos adicionar, por exemplo, as variações das palavras geradas seguidas de um ano específico - ou um ano específico seguido das variações das palavras. Em outras palavras, estamos gerando novas combinações que agora também usam sequências númericas para complementar a lista de senhas. Para utilizar esta função, é necessário utilizar o Modo Simples ao escolher a sequência numéria. Até aqui, temos palavras geradas de diversas formas de escrita e as mesmas seguidas de sequência numéria. 
+Na prática, o que estamos fazendo é criando variações de escrita da(s) palavra(s) fornecida(s) pelo usuário, substituindo letras por caracteres especiais parecidas, como por exemplo trocar um `S` da palavra fornecida por um `$`, ou um `A` por `@` - ou um `4` -, e por aí vai. Até aqui teremos uma lista que pega qualquer palavra digitada e a deixa de várias formas diferentes, porém ainda temos mais opções de combinações para ser feito de forma a incrementar a lista.
 
-Agora, também existe a ideia de criar uma wordlist que utilize números aleatórios ao invés do padrão digitado, também vindo antes ou depois de cada palavra, caso não saiba que sequência digitar. Poderá ser feito assim utilizando o Modo Avançado do script. Neste caso, não importa se você digitou ou não algo nas sequências, pois neste os números serão aleatórios e serão testados mais de uma sequência numérica. Até aqui, podemos ver que temos algumas opções interessantes para criação de uma lista de senhas. 
+Podemos adicionar, por exemplo, essas variações de palavras geradas seguidas de um ano específico - ou um ano específico seguido dessas palavras. Assim, estamos gerando novas combinações que agora também usam sequências númericas para complementar a lista de senhas. Para utilizar esta função, é necessário utilizar o Modo Simples ao escolher a sequência numéria padrão. Até aqui, temos palavras geradas de diversas formas de escrita e as mesmas seguidas de sequência numéria. 
+
+Existe também a ideia de criar uma wordlist que utilize números aleatórios ao invés do padrão digitado, também vindo antes ou depois de cada palavra, caso não saiba que sequência digitar. Poderá ser feito assim utilizando o Modo Avançado do script. Neste caso, não importa se você digitou ou não algo nas sequências, pois neste os números serão aleatórios e serão testados mais de uma sequência numérica. 
+Até aqui, podemos ver que temos algumas opções interessantes para criação de uma lista de senhas, podendo utilizar as variações e sequências numéricas.
 
 ## Modo de uso
 

@@ -11,6 +11,7 @@ table4 = str.maketrans('IilLsS', '1111$$')
 # Cada tabela é um mapeamento de um conjunto de caracteres 
 # para outro conjunto.
 # Por exemplo, 'aioO' é mapeado para '@100' na primeira tabela
+# Em outras palavras, 'a' poderá ser substituído por '@', 'i' por '1' e 'o'/'O' por '0'.
 
 # Agrupando todas as tabelas em uma lista
 list_tables = [table1, table2, table3, table4]
